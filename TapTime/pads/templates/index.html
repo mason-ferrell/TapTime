@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link 
+  rel="stylesheet" 
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+  integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" 
+  crossorigin="anonymous">
+  <link 
+  rel="stylesheet"
+  href="{% static 'index.css' %}"
+  >
+
+  <script 
+    crossorigin 
+    src="https://unpkg.com/react@18/umd/react.production.min.js">
+  </script>
+
+  <script 
+    crossorigin 
+    src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js">
+  </script>
+
+  <script 
+    src="https://unpkg.com/@babel/standalone/babel.min.js">
+  </script>
+
+  <script>
+    var samples = []
+  </script>
+
+  {% for sample in samples %}
+  <script>samples.push({"name":"{{sample.sample_name}}","url":"{{sample.sample_url}}"})</script>
+  {% endfor %}
+
+  <style>
+    select {
+    background: #E91E63;
+    color: #fff;
+    padding: 10px;
+    width: 150px;
+    height: 50px;
+    border: none;
+    font-size: 15px;
+    box-shadow: 0 5px 48px rgb(93, 15, 9);
+    -webkit-appearance: button;
+    outline: none;
+}
+  </style>
+
+  <title>Drum Machine</title>
+
+</head>
+<body> 
+  <div id="root"></div>
+  <script type="text/babel" src="{% static 'index.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+.webPageBG {
+  background-image: linear-gradient(270deg, #89ABE3FF, #EA738DFF);
+  /* -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite; */
+}
+
+.drumPadContainer {
+  width: 60vw;
+}
+
+.btn-customActive {
+  background-color: #3EB489;
+}
+
+.btn-customInactive {
+  background-color: #36454F;
+}
+
+/* @-moz-keyframes spin { 
+  100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+  100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+  100% { 
+      -webkit-transform: rotate(360deg); 
+      transform:rotate(360deg); 
+  } 
+} */
