@@ -1,5 +1,5 @@
 //initial audio clips to be used for each drum pad
-const audioClips = [
+const pads = [
   {
     keyCode: 81,
     keyTrigger: 'Q',
@@ -135,7 +135,7 @@ function TapTime(){
       </nav>
       <div className="drumPadContainer container-fluid w=100">
         <div className=".col-*-*">
-          {audioClips.map(clip => (       //here we generate all the pads, acting as a factory pattern
+          {pads.map(clip => (       //here we generate all the pads, acting as a factory pattern
               <DrumPad key={clip.id} clip={clip} recording={recording} addRecording={addRecording}/>
           ))}
         </div>
