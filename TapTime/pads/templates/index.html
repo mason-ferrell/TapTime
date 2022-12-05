@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
+{% load static %}   <!--this loads our js file which does most of the heavy lifting-->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,6 +28,8 @@
     src="https://unpkg.com/@babel/standalone/babel.min.js">
   </script>
 
+  <!--Here, we create a javascript array called samples so we can use the sample database pulled from our model in our js file-->
+  <!--the next block then pushes the information from each sample to this array. This is a form of the adapter pattern-->
   <script>
     var samples = []
   </script>
@@ -56,6 +58,7 @@
 </head>
 <body> 
   <div id="root"></div>
+  <!--pass the generation of the body off to index.js-->
   <script type="text/babel" src="{% static 'index.js' %}"></script>
 </body>
 </html>
